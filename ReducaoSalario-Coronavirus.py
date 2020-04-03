@@ -1,16 +1,19 @@
 salario = float(input("Qual seu salário: "))
 porcentagem = int(input("Quantos % de corte no salário: "))
 descontos = float(input("Qual o valor dos descontos no contra-cheque: "))
-if salario <= 2666.29:
+if salario < 1599.61:
+    print("Você não está no grupo de redução de salário!")
+if salario < 2666.29:
     corte = (salario*porcentagem)/100
     empregador = salario-corte
     seguro = (salario-1599.61)*0.5
     governo = seguro+1279.69
     apagargoverno = (governo*porcentagem)/100
     total = empregador+apagargoverno
-    print("Salário pago pelo empregador R$ {:.2f} \n "
+    print(" Salário pago pelo empregador R$ {:.2f} \n "
           "Salário pago pelo governo R$ {:.2f} \n "
-          "Salário total do trabalhador R$ {:.2f}".format(empregador,apagargoverno,total-descontos))
+          "Salário total do trabalhador R$ {:.2f} \n "
+          "Redução de R$ {:.2f}".format(empregador,apagargoverno,total-descontos,salario-total))
 elif salario > 2666.29:
     corte = (salario*porcentagem)/100
     empregador=salario-corte
@@ -19,4 +22,5 @@ elif salario > 2666.29:
     total = empregador + apagargoverno
     print(" Salário pago pelo empregador R$ {:.2f} \n "
           "Salário pago pelo governo R$ {:.2f} \n "
-          "Salário total do trabalhador R$ {:.2f}".format(empregador, apagargoverno,total-descontos))
+          "Salário total do trabalhador R$ {:.2f} \n "
+          "Redução de R$ {:.2f}".format(empregador, apagargoverno,total-descontos,salario-total))
