@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 salario = float(input("Qual seu salário: "))
 porcentagem = int(input("Quantos % de corte no salário: "))
 descontos = float(input("Qual o valor dos descontos no contra-cheque: "))
